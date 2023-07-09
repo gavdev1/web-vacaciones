@@ -1,0 +1,11 @@
+{
+  "name": "web-vacaciones",
+  "version": "1.0.0",
+  "description": "Landing de vacaciones responsive con un video como bg elaborada con HTML & SASS ",
+  "scripts": {
+    "sass": "sass -w sass/style.scss src/assets/css/style.css"
+  },
+  "keywords": [],
+  "author": "Gabriel Acero",
+  "license": "ISC"
+}

@@ -1,0 +1,113 @@
+$white: #fff;
+$dark: #000;
+$font: 'Poppins', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  max-height: 100vh;
+  background-color: $dark;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-inline: 1em;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+
+  &__logo {
+    width: 50px;
+  }
+
+  &__element {
+    display: flex;
+    gap: 2em;
+    text-transform: uppercase;
+
+      &-item {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+.vacaciones {
+  margin-top: 10em;
+  text-align: center;
+
+  &__title {
+    font-size: 8em;
+    color: $white;
+    transition: -webkit-text-stroke, color, .5s;
+
+    &:hover {
+      -webkit-text-stroke: 2px $white;
+      color: transparent;
+    }
+  }
+
+  &__button {
+    padding: 1em 4em;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .vacaciones__title {
+    font-size: 4em;
+    margin-bottom: 1em;
+  }
+}
+
+@media (max-width: 580px) {
+  .menu__element {
+    gap: 1em;
+  }
+
+  .menu__logo {
+    width: 30px;
+  }
+
+  .menu__element-item {
+    font-size: .8em;
+  }
+
+  .vacaciones__title {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .menu__element-item {
+    font-size: .5em;
+  }
+
+  .vacaciones__title {
+    font-size: 2.5em;
+  }
+}
